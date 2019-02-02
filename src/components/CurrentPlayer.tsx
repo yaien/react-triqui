@@ -1,27 +1,17 @@
 import * as React from "react";
-import { Player } from "../store/variables";
 import PlayerImage from "./PlayerImage";
-import { connect } from "react-redux";
+import { GameContext } from "../core/game";
 
-interface Props {
-  player: Player;
+export function CurrentPlayer() {
+  let game = React.useContext(GameContext);
+  return (
+    <div className="footer">
+      <h5>Juega:</h5>
+      <section>
+        <PlayerImage player={game.state.turn} />
+      </section>
+    </div>
+  );
 }
 
-class CurrentPlayer extends React.PureComponent<Props> {
-  render() {
-    return (
-      <div className="footer">
-        <h5>Juega:</h5>
-        <section>
-          <PlayerImage player={this.props.player} />
-        </section>
-      </div>
-    );
-  }
-}
-
-const mapState = state => ({
-  player: state.player
-});
-
-export default connect(mapState)(CurrentPlayer);
+export default CurrentPlayer;

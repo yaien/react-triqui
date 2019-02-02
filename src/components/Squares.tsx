@@ -1,44 +1,37 @@
 import * as React from "react";
-import { connect } from "react-redux";
-import { Triqui, Player } from "../store/variables";
 import PlayerSquare from "./PlayerSquare";
-
-export interface SquaresProps {
-  squares: Triqui;
-}
+import { GameContext } from "../core/game";
+import { Player } from "triqui";
 
 export interface RowProps {
   row: Player[];
   rowIndex: number;
 }
 
-const Row = ({ row, rowIndex }: RowProps) => (
-  <div className="row">
-    {row.map((player, colIndex) => (
-      <PlayerSquare
-        key={colIndex}
-        row={rowIndex}
-        player={player}
-        column={colIndex}
-      />
-    ))}
-  </div>
-);
-
-class Squares extends React.Component<SquaresProps> {
-  render() {
-    return (
-      <div className="wrapper">
-        {this.props.squares.map((row, rowIndex) => (
-          <Row key={rowIndex} row={row} rowIndex={rowIndex} />
-        ))}
-      </div>
-    );
-  }
+export function Row({ row, rowIndex }: RowProps) {
+  return (
+    <div className="row">
+      {row.map((player, colIndex) => (
+        <PlayerSquare
+          key={colIndex}
+          row={rowIndex}
+          player={player}
+          column={colIndex}
+        />
+      ))}
+    </div>
+  );
 }
 
-const mapState = state => ({
-  squares: state.squares
-});
+function Squares() {
+  let { state } = React.useContext(GameContext);
+  return (
+    <div className="wrapper">
+      {state.game.map((row, rowIndex) => (
+        <Row key={rowIndex} row={row} rowIndex={rowIndex} />
+      ))}
+    </div>
+  );
+}
 
-export default connect(mapState)(Squares);
+export default Squares;

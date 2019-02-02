@@ -1,30 +1,21 @@
 import * as React from "react";
-import { connect } from "react-redux";
-import { resetGame } from "../store/actions/winner.ats";
+import { GameContext } from "../core/game";
+import { Status } from "triqui";
 
-interface Props {
-  draw: boolean;
-  reset: () => void;
-}
-
-class Draw extends React.Component<Props> {
-  render() {
-    if (!this.props.draw) return null;
+export function Draw() {
+  let { state, reset } = React.useContext(GameContext);
+  let { result, isEnd } = state;
+  if (isEnd && result.status == Status.Draw) {
     return (
       <div className="winner">
         <h2>EMPATE!</h2>
-        <button className="btn" onClick={this.props.reset}>
+        <button className="btn" onClick={reset}>
           VOLVER A JUGAR
         </button>
       </div>
     );
   }
+  return null;
 }
 
-const mapState = state => ({ draw: state.draw });
-const mapDispatch = dispatch => ({ reset: () => dispatch(resetGame()) });
-
-export default connect(
-  mapState,
-  mapDispatch
-)(Draw);
+export default Draw;
