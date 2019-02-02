@@ -1,7 +1,7 @@
 import * as React from "react";
 import PlayerImage from "./PlayerImage";
 import { Player } from "triqui";
-import { GameContext } from "../core/game";
+import { GameContext } from "../core";
 
 export interface Props {
   player: Player;

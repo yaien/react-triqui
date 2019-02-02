@@ -5,30 +5,25 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@types/jest": "^23.3.13",
-    "@types/lodash": "^4.14.116",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
-    "@types/react-redux": "^6.0.9",
     "jest": "^24.0.0",
     "parcel-bundler": "^1.9.7",
+    "react-testing-library": "^5.4.4",
     "ts-jest": "^23.10.5",
     "typescript": "^3.0.3"
   },
   "dependencies": {
     "components": "^0.1.0",
-    "lodash": "^4.17.11",
     "react": "^16.8.0-alpha.1",
     "react-dom": "^16.8.0-alpha.1",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0",
-    "store": "^2.0.12",
-    "styled-components": "^3.4.9",
     "triqui": "^1.0.0"
   }
 }

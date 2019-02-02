@@ -3,7 +3,7 @@ import Squares from "./components/Squares";
 import CurrentPlayer from "./components/CurrentPlayer";
 import Winner from "./components/Winner";
 import Draw from "./components/Draw";
-import { Game } from "./core/game";
+import { Game } from "./core";
 
 class App extends React.Component {
   render() {

@@ -1,10 +1,9 @@
 import * as React from "react";
-import { GameContext } from "../core/game";
+import { GameContext } from "../core";
 import { Status } from "triqui";
 
 export function Draw() {
-  let { state, reset } = React.useContext(GameContext);
-  let { result, isEnd } = state;
+  let { reset, result, isEnd } = React.useContext(GameContext);
   if (isEnd && result.status == Status.Draw) {
     return (
       <div className="winner">

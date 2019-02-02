@@ -26,5 +26,5 @@ export function useGame() {
 
   let state = gameState(triqui);
 
-  return { state, play, reset };
+  return { ...state, play, reset };
 }

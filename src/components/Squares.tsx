@@ -1,6 +1,6 @@
 import * as React from "react";
 import PlayerSquare from "./PlayerSquare";
-import { GameContext } from "../core/game";
+import { GameContext } from "../core";
 import { Player } from "triqui";
 
 export interface RowProps {
@@ -24,10 +24,10 @@ export function Row({ row, rowIndex }: RowProps) {
 }
 
 function Squares() {
-  let { state } = React.useContext(GameContext);
+  let { game } = React.useContext(GameContext);
   return (
     <div className="wrapper">
-      {state.game.map((row, rowIndex) => (
+      {game.map((row, rowIndex) => (
         <Row key={rowIndex} row={row} rowIndex={rowIndex} />
       ))}
     </div>

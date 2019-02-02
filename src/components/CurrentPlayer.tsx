@@ -1,14 +1,14 @@
 import * as React from "react";
 import PlayerImage from "./PlayerImage";
-import { GameContext } from "../core/game";
+import { GameContext } from "../core";
 
 export function CurrentPlayer() {
-  let game = React.useContext(GameContext);
+  let { turn } = React.useContext(GameContext);
   return (
     <div className="footer">
       <h5>Juega:</h5>
       <section>
-        <PlayerImage player={game.state.turn} />
+        <PlayerImage player={turn} />
       </section>
     </div>
   );
