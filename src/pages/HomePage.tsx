@@ -1,12 +1,11 @@
 import * as React from "react";
 import { Create } from "../components/Create";
-import { Join } from "../components/Join";
+import { Container } from "../components/shared/Container";
 
 export function HomePage() {
   return (
-    <div className="container">
+    <Container>
       <Create />
-      <Join />
-    </div>
+    </Container>
   );
 }

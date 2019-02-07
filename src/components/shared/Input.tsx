@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled, { StyledComponentProps } from "styled-components";
 
 const InputGroup = styled.div`
   display: flex;
@@ -29,15 +29,17 @@ const InputField = styled.input`
   }
 `;
 
-export interface InputProps extends React.HTMLProps<HTMLInputElement> {
+export interface InputProps
+  extends StyledComponentProps<"input", any, {}, never> {
   label?: string;
 }
 
 export function Input(props: InputProps) {
+  let { label, ...rest } = props;
   return (
     <InputGroup>
-      <InputLabel htmlFor="">{props.label}</InputLabel>
-      <InputField type="text" />
+      <InputLabel htmlFor="">{label}</InputLabel>
+      <InputField type="text" {...rest} />
     </InputGroup>
   );
 }
