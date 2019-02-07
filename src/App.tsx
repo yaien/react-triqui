@@ -1,23 +1,19 @@
 import * as React from "react";
-import Squares from "./components/Squares";
-import CurrentPlayer from "./components/CurrentPlayer";
-import Winner from "./components/Winner";
-import Draw from "./components/Draw";
-import { Game } from "./core";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { GamePage } from "./pages/GamePage";
+import { HomePage } from "./pages/HomePage";
+import { RoomPage } from "./pages/RoomPage";
 
-class App extends React.Component {
-  render() {
-    return (
-      <Game>
-        <>
-          <Squares />
-          <CurrentPlayer />
-          <Winner />
-          <Draw />
-        </>
-      </Game>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/room/:id" component={RoomPage} />
+        <Route path="/game" component={GamePage} />
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
