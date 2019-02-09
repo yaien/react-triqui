@@ -1,7 +1,5 @@
 import * as React from "react";
-import { Card } from "./shared/Card";
-import { Input } from "./shared/Input";
-import { Button } from "./shared/Button";
+import { Card, Input, Button } from "../shared";
 
 export function Join() {
   return (

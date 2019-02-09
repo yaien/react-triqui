@@ -1,8 +1,6 @@
 import * as React from "react";
-import { Card } from "./shared/Card";
-import { List, Item } from "./shared/List";
-import { Player } from "../interfaces";
-import { Button } from "./shared/Button";
+import { Card, List, Item, Button } from "../shared";
+import { Player } from "../../interfaces";
 
 export interface PlayerListProps {
   players: Player[];

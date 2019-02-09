@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Create } from "../components/Create";
+import { Create } from "../components/room/";
 import { Container } from "../components/shared/Container";
 
 export function HomePage() {

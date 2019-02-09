@@ -1,7 +1,7 @@
 import * as React from "react";
-import circle from "../assets/circle.svg";
-import cross from "../assets/cross.svg";
-import empty from "../assets/empty.svg";
+import circle from "./assets/circle.svg";
+import cross from "./assets/cross.svg";
+import empty from "./assets/empty.svg";
 import { Player } from "triqui";
 import styled from "styled-components";
 

@@ -1,9 +1,5 @@
 import * as React from "react";
-import { Game } from "../core";
-import Squares from "../components/Squares";
-import CurrentPlayer from "../components/CurrentPlayer";
-import Winner from "../components/Winner";
-import Draw from "../components/Draw";
+import { Game, Squares, CurrentPlayer, Winner, Draw } from "../components/game";
 
 export function GamePage() {
   return (

@@ -1,8 +1,7 @@
 import * as React from "react";
-import { Container } from "../components/shared/Container";
+import { Container } from "../components/shared";
 import { Player } from "../interfaces";
-import { Join } from "../components/Join";
-import { PlayerList } from "../components/PlayerList";
+import { Join, PlayerList } from "../components/room";
 import { RouteComponentProps } from "react-router-dom";
 
 export function RoomPage(props: RouteComponentProps) {

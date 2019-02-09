@@ -1,6 +1,6 @@
 import * as React from "react";
 import PlayerSquare from "./PlayerSquare";
-import { GameContext } from "../core";
+import { GameContext } from "./core";
 import { Player } from "triqui";
 import styled from "styled-components";
 
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function Squares() {
+export function Squares() {
   let { game } = React.useContext(GameContext);
   return (
     <Wrapper>

@@ -1,9 +1,7 @@
 import * as React from "react";
-import { Card } from "./shared/Card";
-import { Input } from "./shared/Input";
-import { Button } from "./shared/Button";
-import { Form } from "./shared/Form";
-import { Player } from "../interfaces";
+import { Card } from "../shared/Card";
+import { Player } from "../../interfaces";
+import { Form, Input, Button } from "../shared";
 
 export interface CreateProps {
   onSubmit?(player: Partial<Player>): void;

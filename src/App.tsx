@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { GamePage } from "./pages/GamePage";
 import { HomePage } from "./pages/HomePage";
 import { RoomPage } from "./pages/RoomPage";
-import { GlobalStyle } from "./components/GlobalStyle";
+import { GlobalStyle } from "./components/shared";
 
 function App() {
   return (

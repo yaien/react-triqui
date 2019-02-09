@@ -1,5 +1,6 @@
 import styled from "styled-components";
-export const WinnerButton = styled.button`
+
+export const ResultButton = styled.button`
   border: none;
   padding: 5px;
   font-size: 1rem;

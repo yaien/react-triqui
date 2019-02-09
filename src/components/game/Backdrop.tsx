@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const WinnerWrapper = styled.div`
+export const Backdrop = styled.div`
   z-index: 100;
   background: white;
   opacity: 0.9;

@@ -1,6 +1,6 @@
 import * as React from "react";
 import PlayerImage from "./PlayerImage";
-import { GameContext } from "../core";
+import { GameContext } from "./core";
 import styled from "styled-components";
 
 const CurrentWrapper = styled.div`
