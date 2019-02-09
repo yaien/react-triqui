@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const ResultButton = styled.button`
   border: none;
-  padding: 5px;
+  padding: 8px;
   font-size: 1rem;
+  font-weight: bold;
   background: transparent;
   cursor: pointer;
   color: darkblue;
