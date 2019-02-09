@@ -25,7 +25,7 @@ export function Create(props: CreateProps) {
   return (
     <Card title="Juego Nuevo">
       <Form onSubmit={submit}>
-        <Input label="Jugador:" required onChange={change} />
+        <Input label="Jugador" required onChange={change} />
         <Button type="submit">OK</Button>
       </Form>
     </Card>

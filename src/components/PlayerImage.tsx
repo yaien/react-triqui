@@ -3,6 +3,12 @@ import circle from "../assets/circle.svg";
 import cross from "../assets/cross.svg";
 import empty from "../assets/empty.svg";
 import { Player } from "triqui";
+import styled from "styled-components";
+
+const Sign = styled.img`
+  width: 100%;
+  height: 100%;
+`;
 
 interface Props {
   player: Player;
@@ -11,11 +17,11 @@ interface Props {
 export function PlayerImage(props: Props) {
   switch (props.player) {
     case Player.Circle:
-      return <img src={circle} />;
+      return <Sign src={circle} />;
     case Player.Cross:
-      return <img src={cross} />;
+      return <Sign src={cross} />;
     default:
-      return <img src={empty} />;
+      return <Sign src={empty} />;
   }
 }
 

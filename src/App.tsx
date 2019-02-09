@@ -3,16 +3,20 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { GamePage } from "./pages/GamePage";
 import { HomePage } from "./pages/HomePage";
 import { RoomPage } from "./pages/RoomPage";
+import { GlobalStyle } from "./components/GlobalStyle";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/room/:id" component={RoomPage} />
-        <Route path="/game" component={GamePage} />
-      </Switch>
-    </Router>
+    <>
+      <GlobalStyle />
+      <Router>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/room/:id" component={RoomPage} />
+          <Route path="/game" component={GamePage} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
