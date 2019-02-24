@@ -1,24 +1,24 @@
 import * as React from "react";
 import { Card } from "../shared/Card";
-import { Player } from "../../interfaces";
+import { Player, RoomAccess } from "../../interfaces";
 import { Form, Input, Button } from "../shared";
 
 export interface CreateProps {
-  onSubmit?(player: Partial<Player>): void;
+  onSubmit?(payload: RoomAccess): void;
 }
 
 export function Create(props: CreateProps) {
   let [name, setName] = React.useState("");
 
-  const change = (e: React.ChangeEvent<HTMLInputElement>) => {
+  function change(e: React.ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
-  };
+  }
 
-  const submit = () => {
+  function submit() {
     if (props.onSubmit) {
-      props.onSubmit({ name });
+      props.onSubmit({ player: name });
     }
-  };
+  }
 
   return (
     <Card title="Juego Nuevo">

@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es3",
     "jsx": "react",
     "module": "commonjs",
+    "lib": ["es2015", "dom"],
     "sourceMap": true
   }
 }
